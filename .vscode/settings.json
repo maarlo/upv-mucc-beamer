@@ -1,0 +1,51 @@
+{
+    "editor.wordWrap": "bounded",
+    "editor.wordWrapColumn": 200,
+    //
+    "latex-workshop.view.pdf.color.dark.backgroundColor": "#1e1e1e",
+    "latex-workshop.view.pdf.spreadMode": 0,
+    "latex-workshop.view.pdf.zoom": "page-fit",
+    "latex-workshop.view.pdf.viewer": "browser",
+    "latex-workshop.latexindent.args": [
+        "-c",
+        "%DIR%/",
+        "%TMPFILE%",
+        "-y=defaultIndent: '%INDENT%', indentRules:item: '%INDENT%'"
+    ],
+    //
+    "latex-workshop.message.badbox.show": false,
+    "latex-workshop.message.latexlog.exclude": [
+        "\\headheight is too small.*"
+    ],
+    //
+    "latex-workshop.latex.autoBuild.run": "onSave",
+    "latex-workshop.latex.recipe.default": "xelatex x2",
+    "latex-workshop.latex.tools": [
+        {
+            "name": "xelatex",
+            "command": "xelatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                // "-file-line-error",
+                "%DOC%.tex"
+            ]
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%DOCFILE%"
+            ]
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "xelatex x2",
+            "tools": [
+                "xelatex",
+                "xelatex"
+            ]
+        }
+    ]
+}

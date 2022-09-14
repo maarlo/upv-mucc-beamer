@@ -1,0 +1,21 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                             %
+% IDEAS FROM:                                 %
+% https://github.com/driesbenoit/ugent-beamer %
+%                                             %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newif\ifbeamer@noframenumber\beamer@noframenumberfalse
+\DeclareOptionBeamer{noframenumber}{\beamer@noframenumbertrue}
+
+\ProcessOptionsBeamer
+
+% Theme configuration
+\mode<presentation>
+
+\useinnertheme{mucc}
+\useoutertheme{mucc}
+\usecolortheme{mucc}
+\usefonttheme{mucc}
+
+\mode<all>

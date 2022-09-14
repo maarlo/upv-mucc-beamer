@@ -1,0 +1,175 @@
+% Aspectratio 16:9 is recommended
+\documentclass[aspectratio=169]{beamer}
+
+% Metadata of the presentation
+\title{MUCC beamer theme}
+\subtitle{Powered by \LaTeX}
+\date{miercóles, 14 de septiembre de 2022}
+\author[maarlo9]{Mario Aragonés Lozano <\texttt{maarlo9@teleco.upv.es}>}
+
+% Load the MUCC theme
+\usetheme{mucc}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Have this if you'd like section slides
+% \AtBeginSection[]{
+%     \sectionframe
+% }
+
+% Have this if you'd like a toc highlighting the current section
+\AtBeginSection[]{
+    \begin{frame}{Overview}
+        \tableofcontents[currentsection]
+    \end{frame}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+% I guess you always want a titleframe
+\titleframe
+
+% Have this if you'd like a frame containing the
+% table of content
+\begin{frame}{Overview}
+    \tableofcontents[hideallsubsections]
+\end{frame}
+
+% Start of the first section
+\section{Fonts and layout}
+
+\begin{frame}
+    \frametitle{This is the frame title}
+    Regular text in the body of the slide is black and rendered in Corbel.\\[.5cm]
+    \begin{equation*}
+        F(x|\mu,s) = \int_{-\infty}^x s^{-1}\left(1+e^{-\frac{v-\mu}{s}}\right)^{-2} e^{-\frac{v-\mu}{s}}\;\mathsf{d}v = \frac{1}{1+e^{-\frac{x-\mu}{s}}}
+    \end{equation*}
+    Emphasis can be added by using \textbf{bold} typeface, \textit{italic}, {\color{mucc-alert}colors} or {\color{mucc-alert}\textbf{\textit{any combination}}}.\\
+    More about colors follows later.
+\end{frame}
+
+\begin{frame}
+    \frametitle{The frame title is rendered in Small Caps}
+    The official Powerpoint/Keynote templates have all titles in both ALL CAPS, \textbf{bold} and \underline{underline}.\\[.5cm]
+    In my opinion, this combination is somewhat \underline{\textbf{AGGRESSIVE AND UNPLEASANT TO THE EYE}}.\\[.5cm]
+    Instead, this theme makes use of \textsc{Small Caps} for all titles and subtitles
+\end{frame}
+
+
+\section{Lists and enumeration}
+
+\begin{frame}
+    \frametitle{Lists of items}
+    This is how a list of unnumbered items looks:
+    \begin{itemize}
+        \item Item 1
+        \item Item 2
+        \item Item 3
+    \end{itemize}
+    \vspace{.25cm}
+    Nested lists of items are possible too:
+    \begin{itemize}
+        \item Item 1
+            \begin{itemize}
+                \item Subitem a
+                \item Subitem b
+            \end{itemize}
+        \item Item 2
+            \begin{itemize}
+                \item Subitem a
+                \item Subitem b
+                    \begin{itemize}
+                        \item Subsubitem a
+                        \item Subsubitem b
+                    \end{itemize}
+            \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Lists of items}
+    This is how a list of numbered items looks:\\[.25cm]
+    \begin{enumerate}
+        \itemsep.5cm
+        \item Item 1
+        \item Item 2
+        \item Item 3
+        \item Item 4
+        \item Item 5
+    \end{enumerate}
+\end{frame}
+
+
+\section{Colors}
+
+\begin{frame}
+    \frametitle{Colors}
+    \begin{itemize}
+        \item The offical MUCC colors (in RGB) are part of the theme.
+        \item The primary MUCC color is {\color{mucc-pink} mucc-pink}, and the secondary color is {\color{mucc-black} mucc-black}.
+            \begin{center}
+                \begin{minipage}[t]{.35\textwidth}
+                    \begin{itemize}
+                        \item {\color{mucc-pink}  \textbf{mucc-pink}}
+                        \item {\color{mucc-red}    \textbf{mucc-red}}
+                        \item {\color{mucc-green}   \textbf{mucc-green}}
+                    \end{itemize}
+                \end{minipage}%
+                \begin{minipage}[t]{.35\textwidth}
+                    \begin{itemize}
+                        \item {\color{mucc-black} \textbf{mucc-black}}
+                        \item {\color{mucc-alert} \textbf{mucc-alert}}
+                    \end{itemize}
+                \end{minipage}
+                \vspace{.5cm}
+            \end{center}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Example of mucc-alert}
+    \begin{theorem}
+        There is no largest prime number.
+    \end{theorem}
+    \pause
+    \begin{block}{Proof}
+        \begin{enumerate}
+            \item<2-| alert@2> Suppose $p$ were the largest prime number.
+            \item<3-| alert@3> Let $q$ be the product of the first $p$ numbers.
+            \item<4-| alert@4> Then $q+1$ is not divisible by any of them.
+            \item<5-6| alert@5> But $q + 1$ is greater than $1$, thus divisible by some prime number not in the first $p$ numbers.\only<6>\qed
+        \end{enumerate}
+    \end{block}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Another example of mucc-alert}
+    Blocks can be created for definition, proofs, examples, etc.
+    \begin{block}{Regular block}
+        This is an important message.
+    \end{block}
+    \vspace{.5cm}
+    \pause
+    A special kind of block is the \texttt{alertblock}:
+    \begin{alertblock}{Alert!}
+        This is a very important message.
+    \end{alertblock}
+\end{frame}
+
+
+\section{Frame numbers}
+
+\begin{frame}
+    \frametitle{Frame numbers}
+    \begin{itemize}
+        \itemsep.25cm
+        \item By default frame numbers are places on every frame.
+        \item The frame number is always followed by the total number of frames.
+        \item The theme option \texttt{noframenumber} removes frame numbers on all slides.
+    \end{itemize}
+\end{frame}
+
+% End presentation with titleframe
+\titleframe
+
+\end{document}
