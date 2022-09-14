@@ -4,6 +4,7 @@
 
 Package requeriments:
 - [PGF/TikZ](https://ctan.org/pkg/pgf)
+- [LaTeX Corbel Font](https://github.com/maarlo/latex-font-corbel)
 
 ## Installation
 
