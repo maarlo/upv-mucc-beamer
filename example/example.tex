@@ -40,6 +40,7 @@
 
 \begin{frame}
     \frametitle{This is the frame title}
+    \framesubtitle{With optional frame subtitle}
     Regular text in the body of the slide is black and rendered in Corbel.\\[.5cm]
     \begin{equation*}
         F(x|\mu,s) = \int_{-\infty}^x s^{-1}\left(1+e^{-\frac{v-\mu}{s}}\right)^{-2} e^{-\frac{v-\mu}{s}}\;\mathsf{d}v = \frac{1}{1+e^{-\frac{x-\mu}{s}}}
@@ -60,6 +61,35 @@
 
 \begin{frame}
     \frametitle{Lists of items}
+    This is how a list of unnumbered items looks:
+    \begin{itemize}
+        \item Item 1
+        \item Item 2
+        \item Item 3
+    \end{itemize}
+    \vspace{.25cm}
+    Nested lists of items are possible too:
+    \begin{itemize}
+        \item Item 1
+            \begin{itemize}
+                \item Subitem a
+                \item Subitem b
+            \end{itemize}
+        \item Item 2
+            \begin{itemize}
+                \item Subitem a
+                \item Subitem b
+                    \begin{itemize}
+                        \item Subsubitem a
+                        \item Subsubitem b
+                    \end{itemize}
+            \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Lists of items}
+    \framesubtitle{With optional frame subtitle}
     This is how a list of unnumbered items looks:
     \begin{itemize}
         \item Item 1

@@ -44,6 +44,11 @@
             {\node[anchor=mid east] at (\the\paperwidth,-0.45cm){\usebeamerfont{frametitle}\usebeamercolor[fg]{frametitle}\insertframetitle};}
         \end{tikzpicture}
     \end{beamercolorbox}
+
+    \ifx\insertframesubtitle\@empty%
+    \else%
+        {\usebeamerfont{framesubtitle}\usebeamercolor[fg]{framesubtitle}\insertframesubtitle}%
+    \fi
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
